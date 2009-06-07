@@ -1,0 +1,18 @@
+<html>
+  <body>  
+    <h1>IndicateurQ</h1>
+    <%= image_tag "indicateur_q_incidents.png" %>
+    <p>Incidents Clos: <%= h @incidents_clos.count %></p>
+    <p> Incidents Q  : <%= h @incidents_q.count %></p>
+    <% @incidents_clos.each do |incident| %>
+      <% if @incidents_q.include?(incident) %>
+        <b>
+        <%end%>
+        <p><%= hh incident.name %> <%= h incident.utilisateur.name%> <%= h incident.technicien.name%> <%= h (incident.duration/(24*3600)).round %> </p>
+      <% if @incidents_q.include?(incident) %>
+        </b>
+        <%end%>
+    <%end%>
+  </body>
+</html>
+

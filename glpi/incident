@@ -1,0 +1,7 @@
+<html>
+  <body>  
+    <h1>IndicateurQ</h1>
+    <%= image_tag "indicateur_q_incidents.png" %>
+  </body>
+</html>
+
